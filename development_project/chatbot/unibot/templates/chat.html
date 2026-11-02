@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UniBot</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div><strong>UniBot</strong> <span class="muted">· signed in as {{ student.full_name }} ({{ student.student_id }})</span></div>
+  <div class="topbar-right">
+    <span class="pill" title="Which interpreter is deciding intents">{{ interpreter }}</span>
+    <label class="toggle"><input type="checkbox" id="show-trace"> show agent messages</label>
+    <form method="post" action="/logout"><button class="secondary">Sign out</button></form>
+  </div>
+</header>
+<main class="layout">
+  <section class="chat">
+    <div id="messages" class="messages" aria-live="polite"></div>
+    <form id="chat-form" class="composer">
+      <input id="message" autocomplete="off" placeholder="Ask about your timetable, transcript or assignments…" maxlength="1000" required>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+  <aside id="trace-panel" class="trace hidden">
+    <h2>Agent messages</h2>
+    <p class="muted small">Every exchange between the dialogue agent and the specialist agents for the latest turn.</p>
+    <pre id="trace"></pre>
+  </aside>
+</main>
+<script src="/static/chat.js"></script>
+</body>
+</html>

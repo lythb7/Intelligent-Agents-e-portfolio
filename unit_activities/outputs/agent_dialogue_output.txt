@@ -1,0 +1,68 @@
+(ask-all
+  :sender Alice
+  :receiver Bob
+  :language KIF
+  :ontology warehouse-stock
+  :reply-with id1
+  :content (in-stock ?product ?units) (screen-size ?product 50))
+
+(tell
+  :sender Bob
+  :receiver Alice
+  :language KIF
+  :ontology warehouse-stock
+  :reply-with id2
+  :in-reply-to id1
+  :content ((in-stock TV-5001 42) (in-stock TV-5002 17)))
+
+(ask-one
+  :sender Alice
+  :receiver Bob
+  :language KIF
+  :ontology warehouse-stock
+  :reply-with id3
+  :content (hdmi-ports TV-5001 ?n))
+
+(tell
+  :sender Bob
+  :receiver Alice
+  :language KIF
+  :ontology warehouse-stock
+  :reply-with id4
+  :in-reply-to id3
+  :content (hdmi-ports TV-5001 3))
+
+(ask-one
+  :sender Alice
+  :receiver Bob
+  :language KIF
+  :ontology warehouse-stock
+  :reply-with id5
+  :content (hdmi-ports TV-5002 ?n))
+
+(tell
+  :sender Bob
+  :receiver Alice
+  :language KIF
+  :ontology warehouse-stock
+  :reply-with id6
+  :in-reply-to id5
+  :content (hdmi-ports TV-5002 4))
+
+(ask-one
+  :sender Alice
+  :receiver Bob
+  :language KIF
+  :ontology warehouse-stock
+  :reply-with id7
+  :content (hdmi-ports TV-9999 ?n))
+
+(sorry
+  :sender Bob
+  :receiver Alice
+  :language KIF
+  :ontology warehouse-stock
+  :reply-with id8
+  :in-reply-to id7
+  :content (unknown-product TV-9999))
+

@@ -1,0 +1,54 @@
+# command: python -m pylint unibot
+# run: before remediation (first complete build; the pytest log here is the clean run after the six first-run failures were fixed, see pytest_first_run_summary.txt)
+************* Module unibot.auth
+unibot/auth.py:48:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module unibot.db
+unibot/db.py:287:0: R0914: Too many local variables (28/15) (too-many-locals)
+unibot/db.py:301:25: W0622: Redefining built-in 'credits' (redefined-builtin)
+unibot/db.py:295:4: C0415: Import outside toplevel (documents.write_assignment_brief) (import-outside-toplevel)
+************* Module unibot.web
+unibot/web.py:39:0: R0914: Too many local variables (16/15) (too-many-locals)
+unibot/web.py:84:14: W0613: Unused argument 'request' (unused-argument)
+unibot/web.py:146:4: C0415: Import outside toplevel (uvicorn) (import-outside-toplevel)
+unibot/web.py:22:0: W0611: Unused AppContext imported from app_context (unused-import)
+************* Module unibot.config
+unibot/config.py:47:0: R0902: Too many instance attributes (8/7) (too-many-instance-attributes)
+************* Module unibot.bus
+unibot/bus.py:61:19: W0718: Catching too general exception Exception (broad-exception-caught)
+************* Module unibot.interpreters
+unibot/interpreters.py:57:0: C0301: Line too long (122/110) (line-too-long)
+unibot/interpreters.py:58:0: C0301: Line too long (162/110) (line-too-long)
+unibot/interpreters.py:59:0: C0301: Line too long (115/110) (line-too-long)
+unibot/interpreters.py:63:0: C0301: Line too long (139/110) (line-too-long)
+unibot/interpreters.py:66:0: C0301: Line too long (121/110) (line-too-long)
+unibot/interpreters.py:67:0: C0301: Line too long (143/110) (line-too-long)
+unibot/interpreters.py:71:0: C0301: Line too long (120/110) (line-too-long)
+unibot/interpreters.py:107:0: C0301: Line too long (127/110) (line-too-long)
+unibot/interpreters.py:149:0: C0301: Line too long (121/110) (line-too-long)
+unibot/interpreters.py:152:0: C0301: Line too long (165/110) (line-too-long)
+unibot/interpreters.py:156:0: C0301: Line too long (128/110) (line-too-long)
+unibot/interpreters.py:157:0: C0301: Line too long (118/110) (line-too-long)
+unibot/interpreters.py:38:0: C0115: Missing class docstring (missing-class-docstring)
+unibot/interpreters.py:45:0: C0115: Missing class docstring (missing-class-docstring)
+unibot/interpreters.py:98:35: W0613: Unused argument 'history' (unused-argument)
+unibot/interpreters.py:178:12: C0415: Import outside toplevel (anthropic) (import-outside-toplevel)
+unibot/interpreters.py:202:15: W0718: Catching too general exception Exception (broad-exception-caught)
+unibot/interpreters.py:253:11: W0718: Catching too general exception Exception (broad-exception-caught)
+************* Module unibot.app_context
+unibot/app_context.py:18:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module unibot.agents.records
+unibot/agents/records.py:25:0: C0115: Missing class docstring (missing-class-docstring)
+unibot/agents/records.py:43:0: C0115: Missing class docstring (missing-class-docstring)
+unibot/agents/records.py:80:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module unibot.agents.dialogue
+unibot/agents/dialogue.py:98:0: C0301: Line too long (112/110) (line-too-long)
+unibot/agents/dialogue.py:108:0: C0301: Line too long (125/110) (line-too-long)
+unibot/agents/dialogue.py:129:0: C0301: Line too long (111/110) (line-too-long)
+unibot/agents/dialogue.py:143:0: C0301: Line too long (112/110) (line-too-long)
+unibot/agents/dialogue.py:147:0: C0301: Line too long (132/110) (line-too-long)
+unibot/agents/dialogue.py:51:0: C0115: Missing class docstring (missing-class-docstring)
+
+-----------------------------------
+Your code has been rated at 9.54/10
+
+pylint exit 28

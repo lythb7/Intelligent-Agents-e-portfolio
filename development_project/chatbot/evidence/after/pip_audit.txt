@@ -1,0 +1,4 @@
+# command: python -m pip_audit -r requirements.txt
+# run: after remediation (final code)
+No known vulnerabilities found
+pip-audit exit 0

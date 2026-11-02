@@ -1,0 +1,6 @@
+# Extra tools for the quality checks; not needed to run or test the app.
+-r requirements.txt
+flake8>=7.0
+pylint>=3.0
+bandit>=1.7
+pip-audit>=2.7

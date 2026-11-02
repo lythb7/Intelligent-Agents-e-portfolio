@@ -1,0 +1,3 @@
+# command: python -m flake8 unibot tests scripts
+# run: after remediation (final code)
+flake8 exit 0

@@ -1,0 +1,22 @@
+First full run of the test-suite (transcribed from the terminal; the raw log was not
+kept because the run happened before the evidence folder was created). Six tests
+failed and 47 passed. The failures and their causes:
+
+FAILED tests/test_agents.py::test_download_follow_up_uses_remembered_list
+    -> "download the second one" resolved to assignment 1: the ordinal table was a
+       dict containing "one", which matched before "second".
+FAILED tests/test_agents.py::test_ambiguous_selector_asks_which
+    -> "download the project one" returned a brief instead of asking which one: the
+       title-word matcher counted filler words such as "one" and "download".
+FAILED tests/test_interpreters.py::test_rule_interpreter[Could I get my results so far as a PDF?-create_transcript]
+    -> classified as download_assignment because the download rule matched "pdf".
+FAILED tests/test_interpreters.py::test_rule_interpreter[can I have the brief for A-IA-1-download_assignment]
+    -> classified as list_active_assignments because the generic assignment rule ran
+       before the reference-code rule.
+FAILED tests/test_interpreters.py::test_rule_interpreter_extracts_selector
+    -> same ordinal bug as the first failure.
+FAILED tests/test_web_security.py::test_assignment_download_checks_enrolment_deadline_and_path
+    -> the test advanced the clock 13 days to expire an assignment, which also expired
+       the 30-minute session, so the response was 401 rather than 404. The test was
+       corrected to sign in again; the application behaviour was right.
+6 failed, 47 passed in 3.08s

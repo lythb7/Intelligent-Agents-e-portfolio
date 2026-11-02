@@ -1,0 +1,17 @@
+# command: python -m pytest -v
+# run: before remediation (first complete build; the pytest log here is the clean run after the six first-run failures were fixed, see pytest_first_run_summary.txt)
+============================= test session starts ==============================
+platform darwin -- Python 3.11.4, pytest-9.2.0, pluggy-1.7.0
+rootdir: /Users/lythhishmeh/Uni/Intelligent_Agents/Submission/chatbot
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.12.1, platformdirs-4.14.3
+collected 53 items
+
+tests/test_acl_bus.py .....                                              [  9%]
+tests/test_agents.py ..............                                      [ 35%]
+tests/test_interpreters.py .........................                     [ 83%]
+tests/test_web_security.py .........                                     [100%]
+
+============================== 53 passed in 2.92s ==============================
+pytest exit 0

@@ -1,0 +1,11 @@
+Signed in as: ben (S1002)
+GET /documents/dANpIT4GYP18PuEqXhjiww
+HTTP 404 Not Found
+content-type: application/json
+
+{"detail":"Document not found."}
+
+Signed in as: amina (S1001)
+GET /documents/dANpIT4GYP18PuEqXhjiww
+HTTP 200 OK
+content-type: application/pdf

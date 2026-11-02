@@ -1,0 +1,13 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.pylint.main]
+ignore-paths = ["tests"]
+max-line-length = 110
+
+[tool.pylint."messages control"]
+disable = ["too-few-public-methods", "missing-function-docstring", "too-many-arguments", "too-many-positional-arguments", "too-many-return-statements"]
+
+[tool.bandit]
+exclude_dirs = ["tests", "data"]
