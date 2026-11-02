@@ -2,7 +2,7 @@
 
 Lyth Hishmeh (34119) · IA_PCOM7E Intelligent Agents, University of Essex Online
 
-This repository holds the Intelligent Agents section of my e-portfolio. It is best read as the published GitHub Pages site, which opens on `index.md`.
+This repository holds the Intelligent Agents section of my e-portfolio. It is best read as the published site, https://lythb7.github.io/Intelligent-Agents-e-portfolio/, which opens on `index.md`.
 
 ## Contents
 

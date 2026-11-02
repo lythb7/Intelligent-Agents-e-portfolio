@@ -1,6 +1,6 @@
 # Individual Reflection: Intelligent Agents Module
 
-*e-Portfolio: [PORTFOLIO WEB ADDRESS TO BE ADDED]*  
+*e-Portfolio: https://lythb7.github.io/Intelligent-Agents-e-portfolio/*  
 *Module: Intelligent Agents (IA_PCOM7E)*  
 *Student Name: Lyth Hishmeh*  
 *Student ID: 34119*  
